@@ -117,6 +117,10 @@ for currentTrial = 1:MaxTrials
         'Timer', 0,...
         'StateChangeConditions', {'Tup', 'exit'},...
         'OutputActions', {});
+    
+    
+    keyboard
+    
     SendStateMatrix(sma);
     RawEvents = RunStateMatrix;
     if ~isempty(fieldnames(RawEvents)) % If trial data was returned

@@ -11,6 +11,7 @@ if ispc
     end
     ArduinoPorts = ArduinoPorts(1:nPorts);
  elseif ismac % Contributed by Thiago Gouvea JUN_9_2016
+    
     [trash, RawSerialPortList] = system('ls /dev/tty.usbmodem*');
     string = strtrim(RawSerialPortList);
     PortStringPositions = strfind(string, '/dev/tty.usbmodem');

@@ -114,6 +114,9 @@ for currentTrial = 1:MaxTrials
         'Timer', S.GUI.PortOutRegDelay,...
         'StateChangeConditions', {'Tup', 'exit', 'Port1In', 'Drinking', 'Port3In', 'Drinking'},...
         'OutputActions', {});
+    
+    keyboard
+    
     SendStateMatrix(sma);
     RawEvents = RunStateMatrix;
     if ~isempty(fieldnames(RawEvents)) % If trial data was returned

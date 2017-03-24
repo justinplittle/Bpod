@@ -151,6 +151,9 @@ for currentTrial = 1:MaxTrials
         'Timer', S.GUI.PunishTimeoutDuration,...
         'StateChangeConditions', {'Tup', 'exit'},...
         'OutputActions', {'SoftCode', 4});
+    
+    keyboard
+    
     SendStateMatrix(sma); % Send the state matrix to the Bpod device
     RawEvents = RunStateMatrix; % Run the trial and return events
     if ~isempty(fieldnames(RawEvents)) % If trial data was returned (i.e. if not final trial, interrupted by user)
